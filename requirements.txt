@@ -1,0 +1,10 @@
+
+
+SpeechRecognition
+groq
+playsound
+PyAudio
+gtts
+smtplib
+googlesearch-python
+python-dotenv
