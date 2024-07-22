@@ -1,5 +1,4 @@
-
-
+pip
 SpeechRecognition
 groq
 playsound
