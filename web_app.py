@@ -5,8 +5,8 @@ from gtts import gTTS
 import os
 from dotenv import load_dotenv
 from groq import Groq
-import pygame
 import smtplib
+import pyttsx3
 
 api_key = os.getenv('GROQ_API_KEY')
 if not api_key:
@@ -14,15 +14,13 @@ if not api_key:
 else:
     client = Groq(api_key=api_key)
 
+
+
 def speak_text(text):
-    tts = gTTS(text=text, lang='en')
-    tts.save("response.mp3")
-    pygame.mixer.init()
-    pygame.mixer.music.load("response.mp3")
-    pygame.mixer.music.play()
-    while pygame.mixer.music.get_busy():  # wait for music to finish playing
-        pass
-    os.remove("response.mp3")
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
 
 def search_online(query):
     try:
