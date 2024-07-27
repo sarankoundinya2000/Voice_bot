@@ -1,8 +1,7 @@
 pip
 SpeechRecognition
 groq
-playsound
-PyAudio
+
 gtts
 googlesearch-python
 python-dotenv
