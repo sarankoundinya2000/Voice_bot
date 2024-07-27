@@ -8,8 +8,11 @@ from dotenv import load_dotenv
 from groq import Groq
 import smtplib
 
-load_dotenv('groqapi.env')
-client = Groq(api_key=os.environ['GROQ_API_KEY'])
+api_key = os.getenv('GROQ_API_KEY')
+if not api_key:
+    st.error("GROQ_API_KEY environment variable is not set!")
+else:
+    client = Groq(api_key=api_key)
 
 def speak_text(text):
     tts = gTTS(text=text, lang='en')
