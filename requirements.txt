@@ -6,3 +6,4 @@ PyAudio
 gtts
 googlesearch-python
 python-dotenv
+GStreamer
