@@ -3,7 +3,6 @@ import speech_recognition as sr
 from googlesearch import search
 from gtts import gTTS
 import os
-from playsound import playsound
 from dotenv import load_dotenv
 from groq import Groq
 import pygame
